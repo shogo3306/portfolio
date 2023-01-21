@@ -1,0 +1,290 @@
+@charset "utf=8";
+@use '../foundation/mixin' as mix;
+@use "../foundation/variable" as var;
+
+
+html {
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+#splash {
+    /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: #eee;
+    text-align: center;
+    color: #fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo svg {
+    width: 500px;
+
+    @include mix.mq(sp) {
+        width: 300px;
+    }
+}
+
+/*SVGのサイズ*/
+svg {
+    max-width: 891px;
+    /*SVGタグの横幅*/
+    width: 100vw;
+    /* レスポンシブ対応にするため100%を指定*/
+    height: 100vh;
+    display: block;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+
+/*マスクをするパスの設定*/
+
+#mask .st0 {
+    fill: none;
+    stroke: #FFFFFF;
+    /*マスクする線の色*/
+    stroke-width: 90;
+    /*線の太さを指定する*/
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 1500;
+    /* 線の間隔を指定する */
+    stroke-dashoffset: 1500;
+    /* 線の位置を指定する */
+}
+
+.header {
+    padding: 0 20px;
+
+    @include mix.mq(tab) {
+        padding: 0 10px 0 20px;
+    }
+
+    @include mix.mq(sd) {
+        padding: 0 10px;
+    }
+
+    &__inner {
+        max-width: 1500px;
+        padding: 0 30px 0 15px;
+        display: flex;
+        width: 100%;
+        height: 10vh;
+        align-items: center;
+
+        @include mix.mq(tab) {
+            padding: 0%;
+        }
+
+        @include mix.mq(sd) {
+            padding: 40px 30px 0 15px
+        }
+    }
+
+    &__title {
+        font-size: var.$main-title-font;
+        margin-right: auto;
+
+
+        @include mix.mq(sd) {
+            font-size: 20px;
+            position: fixed;
+            z-index: 999;
+        }
+
+        @include mix.mq(tab) {
+            font-size: 18px;
+        }
+    }
+
+    &__nav {
+        display: flex;
+
+        align-items: center;
+        font-size: var.$main-title-font;
+
+        @include mix.mq(sd) {
+            display: none;
+        }
+    }
+
+    nav {
+
+        & ul {
+
+            & li a {
+                display: inline-block;
+                transition: 0.5s;
+                list-style: none;
+                text-align: center;
+                text-decoration: none;
+                font-size: 20px;
+                padding: 0 10px;
+
+                &:hover {
+                    color: #fff;
+                    text-shadow: -1px 1px 5px var.$main-color, 1px -1px 5px var.$main-color;
+                }
+
+                @include mix.mq(tab) {
+                    font-size: 18px;
+                }
+
+            }
+        }
+    }
+}
+
+
+
+.openbtn {
+    @include mix.mq(sd) {
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        right: 10px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+
+        & span {
+            display: inline-block;
+            transition: all .4s;
+            position: absolute;
+            left: 14px;
+            height: 3px;
+            border-radius: 2px;
+            background-color: var.$main-color;
+            width: 45%;
+            
+
+            &:nth-of-type(1) {
+                top: 15px;
+                
+            }
+
+            &:nth-of-type(2) {
+                top: 23px;
+            }
+
+            &:nth-of-type(3) {
+                top: 31px;
+               
+            }
+        }
+
+        &.active span:nth-of-type(1) {
+            top: 18px;
+            left: 18px;
+            transform: translateY(6px) rotate(-45deg);
+            width: 30%;
+            background: var.$w-color;
+        }
+
+        &.active span:nth-of-type(2) {
+            opacity: 0;
+        }
+
+        &.active span:nth-of-type(3) {
+            top: 30px;
+            left: 18px;
+            transform: translateY(-6px) rotate(45deg);
+            width: 30%;
+            background: var.$w-color;
+        }
+
+    }
+}
+
+#g-nav {
+    display: none;
+
+    @include mix.mq(sd) {
+        position: fixed;
+        z-index: -1;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var.$main-color;
+        transition: all 0.3s;
+        display: block;
+
+    }
+
+
+    &.panelactive {
+        opacity: 1;
+        z-index: 999;
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        height: 100vh;
+        /*表示する高さ*/
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+
+        & ul {
+            display: block;
+        }
+    }
+
+    &-list {
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        height: 100vh;
+        /*表示する高さ*/
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    & ul {
+        display: none;
+        /*ナビゲーション天地中央揃え*/
+        position: absolute;
+        z-index: 999;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        & li {
+            list-style: none;
+            text-align: center;
+
+            & a {
+                color: var.$w-color;
+                text-decoration: none;
+                padding: 30px;
+                display: block;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-weight: bold;
+
+                &:hover {
+                    color: var.$w-color;
+                    letter-spacing: 0.3em;
+                }
+            }
+        }
+    }
+}
