@@ -1,0 +1,1741 @@
+@charset "UTF-8";
+/*! destyle.css v3.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+/* Reset box-model and set borders */
+/* ============================================ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+}
+
+/* Document */
+/* ============================================ */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Remove gray overlay on links for iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-tap-highlight-color: transparent; /* 3*/
+}
+
+/* Sections */
+/* ============================================ */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/* Vertical rhythm */
+/* ============================================ */
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+
+/* Headings */
+/* ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* Lists (enumeration) */
+/* ============================================ */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Lists (definition) */
+/* ============================================ */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Grouping content */
+/* ============================================ */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+address {
+  font-style: inherit;
+}
+
+/* Text-level semantics */
+/* ============================================ */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Replaced content */
+/* ============================================ */
+/**
+ * Prevent vertical alignment issues.
+ */
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+
+/* Forms */
+/* ============================================ */
+/**
+ * Reset form fields to make them styleable.
+ * 1. Make form elements stylable across systems iOS especially.
+ * 2. Inherit text-transform from parent.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none; /* 1 */
+  -moz-appearance: none;
+       appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit; /* 2 */
+}
+
+/**
+ * Reset radio and checkbox appearance to preserve their look in iOS.
+ */
+[type=checkbox] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+       appearance: checkbox;
+}
+
+[type=radio] {
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+       appearance: radio;
+}
+
+/**
+ * Correct cursors for clickable elements.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled {
+  cursor: default;
+}
+
+/**
+ * Improve outlines for Firefox and unify style with input elements & buttons.
+ */
+:-moz-focusring {
+  outline: auto;
+}
+
+select:disabled {
+  opacity: inherit;
+}
+
+/**
+ * Remove padding
+ */
+option {
+  padding: 0;
+}
+
+/**
+ * Reset to invisible
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the outline style in Safari.
+ */
+[type=search] {
+  outline-offset: -2px; /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Fix font inheritance.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/**
+ * Clickable labels
+ */
+label[for] {
+  cursor: pointer;
+}
+
+/* Interactive */
+/* ============================================ */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/*
+ * Remove outline for editable content.
+ */
+[contenteditable]:focus {
+  outline: auto;
+}
+
+/* Tables */
+/* ============================================ */
+/**
+1. Correct table border color inheritance in all Chrome and Safari.
+*/
+table {
+  border-color: inherit; /* 1 */
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+}
+
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+#splash {
+  /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: #eee;
+  text-align: center;
+  color: #fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo svg {
+  width: 500px;
+}
+@media screen and (max-width:500px) {
+  #splash_logo svg {
+    width: 300px;
+  }
+}
+
+/*SVGのサイズ*/
+svg {
+  max-width: 891px;
+  /*SVGタグの横幅*/
+  width: 100vw;
+  /* レスポンシブ対応にするため100%を指定*/
+  height: 100vh;
+  display: block;
+  margin: 0 auto;
+  padding: 0 10%;
+}
+
+/*マスクをするパスの設定*/
+#mask .st0 {
+  fill: none;
+  stroke: #FFFFFF;
+  /*マスクする線の色*/
+  stroke-width: 90;
+  /*線の太さを指定する*/
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1500;
+  /* 線の間隔を指定する */
+  stroke-dashoffset: 1500;
+  /* 線の位置を指定する */
+}
+
+.header {
+  padding: 0 20px;
+}
+@media screen and (max-width:820px) {
+  .header {
+    padding: 0 10px 0 20px;
+  }
+}
+@media screen and (max-width:600px) {
+  .header {
+    padding: 0 10px;
+  }
+}
+.header__inner {
+  max-width: 1500px;
+  padding: 0 30px 0 15px;
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  align-items: center;
+}
+@media screen and (max-width:820px) {
+  .header__inner {
+    padding: 0%;
+  }
+}
+@media screen and (max-width:600px) {
+  .header__inner {
+    padding: 40px 30px 0 15px;
+  }
+}
+.header__title {
+  font-size: 25px;
+  margin-right: auto;
+}
+@media screen and (max-width:600px) {
+  .header__title {
+    font-size: 20px;
+    position: fixed;
+    z-index: 999;
+  }
+}
+@media screen and (max-width:820px) {
+  .header__title {
+    font-size: 18px;
+  }
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+@media screen and (max-width:600px) {
+  .header__nav {
+    display: none;
+  }
+}
+.header nav ul li a {
+  display: inline-block;
+  transition: 0.5s;
+  list-style: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0 10px;
+}
+.header nav ul li a:hover {
+  color: #fff;
+  text-shadow: -1px 1px 5px #333, 1px -1px 5px #333;
+}
+@media screen and (max-width:820px) {
+  .header nav ul li a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .openbtn {
+    display: block;
+    position: fixed;
+    z-index: 1000;
+    right: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+  .openbtn span {
+    display: inline-block;
+    transition: all 0.4s;
+    position: absolute;
+    left: 14px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #333;
+    width: 45%;
+  }
+  .openbtn span:nth-of-type(1) {
+    top: 15px;
+  }
+  .openbtn span:nth-of-type(2) {
+    top: 23px;
+  }
+  .openbtn span:nth-of-type(3) {
+    top: 31px;
+  }
+  .openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+    background: #fff;
+  }
+  .openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .openbtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+    background: #fff;
+  }
+}
+
+#g-nav {
+  display: none;
+}
+@media screen and (max-width:600px) {
+  #g-nav {
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    transition: all 0.3s;
+    display: block;
+  }
+}
+#g-nav.panelactive {
+  opacity: 1;
+  z-index: 999;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  /*表示する高さ*/
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+#g-nav.panelactive ul {
+  display: block;
+}
+#g-nav-list {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  /*表示する高さ*/
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+#g-nav ul {
+  display: none;
+  /*ナビゲーション天地中央揃え*/
+  position: absolute;
+  z-index: 999;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#g-nav ul li {
+  list-style: none;
+  text-align: center;
+}
+#g-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 30px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+#g-nav ul li a:hover {
+  color: #fff;
+  letter-spacing: 0.3em;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0 auto;
+}
+
+.main-visual {
+  padding: 20px;
+}
+.main-visual__inner {
+  position: relative;
+  height: 600px;
+}
+.main-visual__bg {
+  width: 45rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: multiply;
+}
+@media screen and (max-width:1300px) {
+  .main-visual__bg {
+    width: 42rem;
+  }
+}
+@media screen and (max-width:820px) {
+  .main-visual__bg {
+    width: 40rem;
+  }
+}
+@media screen and (max-width:500px) {
+  .main-visual__bg {
+    width: 32rem;
+    top: 45%;
+  }
+}
+@media screen and (max-width:400px) {
+  .main-visual__bg {
+    width: 28rem;
+    top: 50%;
+  }
+}
+.main-visual__img {
+  width: 35%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: absolute;
+  top: 6%;
+  left: 36%;
+}
+@media screen and (max-width:1300px) {
+  .main-visual__img {
+    width: 40%;
+    left: 32%;
+  }
+}
+@media screen and (max-width:1100px) {
+  .main-visual__img {
+    left: 32%;
+    top: 10%;
+  }
+}
+@media screen and (max-width:820px) {
+  .main-visual__img {
+    width: 60%;
+    left: 24%;
+  }
+}
+@media screen and (max-width:500px) {
+  .main-visual__img {
+    width: 75%;
+    left: 19%;
+    top: 14%;
+  }
+}
+@media screen and (max-width:400px) {
+  .main-visual__img {
+    width: 80%;
+    left: 13%;
+  }
+}
+.main-visual__circle {
+  -webkit-animation: 3s linear infinite rotation;
+          animation: 3s linear infinite rotation;
+  position: absolute;
+  right: 14%;
+  bottom: 5%;
+}
+@media screen and (max-width:1100px) {
+  .main-visual__circle {
+    bottom: 30%;
+  }
+}
+@media screen and (max-width:820px) {
+  .main-visual__circle {
+    bottom: 17%;
+  }
+}
+@media screen and (max-width:500px) {
+  .main-visual__circle {
+    right: 27%;
+  }
+}
+@media screen and (max-width:400px) {
+  .main-visual__circle {
+    right: 90px;
+  }
+}
+.main-visual__circle-text {
+  position: relative;
+  width: 0;
+  /* 直径 */
+  height: 0;
+  /* 直径 */
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  transform: rotate(0deg);
+  /* 円の回転 */
+}
+@media screen and (max-width:1100px) {
+  .main-visual__circle-text {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width:820px) {
+  .main-visual__circle-text {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width:500px) {
+  .main-visual__circle-text {
+    font-size: 15px;
+  }
+}
+.main-visual__circle-text span {
+  position: absolute;
+  height: 110px;
+  bottom: 0;
+  display: inline-block;
+  /* 半径 */
+  transform-origin: center bottom;
+  /* 回転の基準点 */
+  /*  border: solid 1px; */
+}
+@media screen and (max-width:1100px) {
+  .main-visual__circle-text span {
+    height: 90px;
+  }
+}
+@media screen and (max-width:820px) {
+  .main-visual__circle-text span {
+    height: 80px;
+  }
+}
+@media screen and (max-width:400px) {
+  .main-visual__circle-text span {
+    height: 70px;
+  }
+}
+.main-visual__circle-text span:nth-child(1) {
+  transform: rotate(0deg);
+}
+.main-visual__circle-text span:nth-child(2) {
+  transform: rotate(30deg);
+}
+.main-visual__circle-text span:nth-child(3) {
+  transform: rotate(60deg);
+}
+.main-visual__circle-text span:nth-child(4) {
+  transform: rotate(90deg);
+}
+.main-visual__circle-text span:nth-child(5) {
+  transform: rotate(120deg);
+}
+.main-visual__circle-text span:nth-child(6) {
+  transform: rotate(150deg);
+}
+.main-visual__circle-text span:nth-child(7) {
+  transform: rotate(180deg);
+}
+.main-visual__circle-text span:nth-child(8) {
+  transform: rotate(210deg);
+}
+.main-visual__circle-text span:nth-child(9) {
+  transform: rotate(240deg);
+}
+.main-visual__circle-text span:nth-child(10) {
+  transform: rotate(270deg);
+}
+.main-visual__circle-text span:nth-child(11) {
+  transform: rotate(300deg);
+}
+.main-visual__circle-text span:nth-child(12) {
+  transform: rotate(330deg);
+}
+
+.scrolldown2 {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  left: 50%;
+  /*上から下にかけて丸が透過→不透明→透過する*/
+}
+.scrolldown2 span {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  /*テキストの形状*/
+  color: #000;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  /*縦書き設定*/
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+.scrolldown2::before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  /*丸の形状*/
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000;
+  /*丸の動き1.6秒かけて透過し、永遠にループ*/
+  -webkit-animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+          animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+}
+@-webkit-keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+@keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+@-webkit-keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.scrolldown2::after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /*線の形状*/
+  width: 2px;
+  height: 50px;
+  background: #000;
+}
+
+.work__ly {
+  margin-top: 20%;
+}
+.work__inner {
+  max-width: 1500px;
+  height: auto;
+  margin: 10% auto;
+  position: relative;
+  text-align: center;
+}
+.work__title {
+  display: inline-block;
+  margin: 0 auto 10%;
+}
+
+.heading11 {
+  position: relative;
+  font-size: 26px;
+  text-align: center;
+}
+.heading11::before {
+  content: attr(data-number);
+  display: block;
+  margin-bottom: 50px;
+  color: #333;
+  font-size: 30px;
+}
+.heading11::after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 20px;
+  background-color: #333;
+}
+
+.wrap {
+  position: relative;
+  height: 100vh;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+  transform: scale(0.5);
+}
+.item:hover {
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.2);
+  transform: scale(0.9);
+}
+
+.item04,
+.item05,
+.item06 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@media screen and (max-width:1000px) {
+  .item04 {
+    position: absolute;
+    top: -50%;
+  }
+}
+@media screen and (max-width:400px) {
+  .item04 {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .item05 {
+    position: absolute;
+    top: 0%;
+  }
+}
+@media screen and (max-width:400px) {
+  .item05 {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .item06 {
+    position: absolute;
+    top: 50%;
+  }
+}
+@media screen and (max-width:400px) {
+  .item06 {
+    width: 100vw;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+}
+.modal__bg {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: scroll;
+  /* はみ出た部分はスクロールさせる */
+  height: 60%;
+  /* これが無いと「overflow:scroll」が利かない */
+  width: 60%;
+  /* これが無いと「overflow:scroll」が利かない */
+  background: white;
+  padding: 40px;
+}
+@media screen and (max-width:820px) {
+  .modal__content {
+    width: 70%;
+    height: 70%;
+  }
+}
+@media screen and (max-width:600px) {
+  .modal__content {
+    width: 80%;
+    height: 80%;
+    padding: 20px;
+  }
+}
+.modal__title {
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 5%;
+}
+@media screen and (max-width:600px) {
+  .modal__title {
+    font-size: 2rem;
+  }
+}
+.modal__sub-title {
+  font-size: 2rem;
+  text-align: initial;
+  padding: 4% 2%;
+  border-bottom: 1px solid #000;
+}
+@media screen and (max-width:820px) {
+  .modal__sub-title {
+    font-size: 1.6rem;
+    padding: 6% 2%;
+  }
+}
+@media screen and (max-width:600px) {
+  .modal__sub-title {
+    font-size: 1.4rem;
+  }
+}
+.modal__text {
+  text-align: initial;
+  line-height: 2;
+  padding: 0 2%;
+  font-size: 1.6rem;
+}
+@media screen and (max-width:600px) {
+  .modal__text {
+    font-size: 1.4rem;
+  }
+}
+.modal__info {
+  padding: 2%;
+}
+.modal__ly {
+  padding-bottom: 5%;
+}
+@media screen and (max-width:600px) {
+  .modal__ly {
+    padding-bottom: 10%;
+  }
+}
+.modal__img {
+  width: 50%;
+  border: 1px solid;
+  margin: 5% 0;
+}
+@media screen and (max-width:820px) {
+  .modal__img {
+    width: 70%;
+  }
+}
+.modal__btn {
+  width: 15%;
+  font-size: 1.2vw;
+}
+@media screen and (max-width:820px) {
+  .modal__btn {
+    width: 21%;
+  }
+}
+@media screen and (max-width:400px) {
+  .modal__btn {
+    width: 30%;
+  }
+}
+.modal__link {
+  font-size: 1.2vw;
+  width: 160px;
+  height: 50px;
+  border-width: 1px;
+  color: #fff;
+  border-color: #282926;
+  text-shadow: 1px 1px 0px #282926;
+  background: #282926;
+}
+@media screen and (max-width:820px) {
+  .modal__link {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width:600px) {
+  .modal__link {
+    font-size: 1.4rem;
+  }
+}
+.modal__link:hover {
+  background: #777;
+}
+
+.js-modal-close {
+  display: block;
+  padding: 3%;
+  border: 1px solid;
+  margin: 0 auto;
+}
+
+span.modal__content1 {
+  list-style: none;
+  font-size: 1.2vw;
+  float: left;
+  border-bottom: 1px solid #000;
+}
+@media screen and (max-width:820px) {
+  span.modal__content1 {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width:600px) {
+  span.modal__content1 {
+    font-size: 1.4rem;
+  }
+}
+
+span.modal__content2 {
+  display: block;
+  margin-left: 110px;
+  font-size: 1.2vw;
+  text-align: initial;
+}
+@media screen and (max-width:820px) {
+  span.modal__content2 {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width:600px) {
+  span.modal__content2 {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width:400px) {
+  span.modal__content2 {
+    margin-left: 80px;
+  }
+}
+
+.eachTextAnime span {
+  opacity: 0;
+}
+
+.eachTextAnime.appeartext {
+  text-align: center;
+  font-size: 3vw;
+  color: #333;
+}
+@media screen and (max-width:820px) {
+  .eachTextAnime.appeartext {
+    font-size: 5vw;
+  }
+}
+@media screen and (max-width:500px) {
+  .eachTextAnime.appeartext {
+    font-size: 7vw;
+  }
+}
+
+.eachTextAnime.appeartext span {
+  -webkit-animation: text_anime_on 2s ease-in forwards;
+          animation: text_anime_on 2s ease-in forwards;
+}
+
+@-webkit-keyframes text_anime_on {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes text_anime_on {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.skill__ly {
+  margin: 10% 0 15%;
+}
+.skill__inner {
+  padding: 0 10%;
+}
+@media screen and (max-width:820px) {
+  .skill__inner {
+    padding: 0 20%;
+  }
+}
+@media screen and (max-width:500px) {
+  .skill__inner {
+    padding: 0 18%;
+  }
+}
+.skill__title {
+  margin-bottom: 5%;
+}
+.skill__img {
+  mix-blend-mode: multiply;
+}
+@media screen and (max-width:820px) {
+  .skill__img1 {
+    width: 80px;
+    height: auto;
+    margin: 15% 0;
+  }
+}
+@media screen and (max-width:500px) {
+  .skill__img1 {
+    width: 0px;
+    height: auto;
+    margin: 10% 0;
+  }
+}
+.skill__grid {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  -moz-column-gap: 5%;
+       column-gap: 5%;
+  margin-top: 5%;
+}
+@media screen and (max-width:820px) {
+  .skill__grid {
+    display: block;
+  }
+}
+.skill__grid--title {
+  font-size: 1.4vw;
+  padding: 5% 0 10%;
+}
+@media screen and (max-width:820px) {
+  .skill__grid--title {
+    padding: 5% 0;
+    font-size: 3vw;
+  }
+}
+.skill__grid-f {
+  border: 1px solid #000;
+  border-radius: 30px;
+  text-align: center;
+}
+@media screen and (max-width:820px) {
+  .skill__grid-f {
+    margin-bottom: 15%;
+  }
+}
+.skill__grid--text {
+  text-align: left;
+  line-height: initial;
+  font-size: 2rem;
+  padding: 7% 3% 0;
+}
+@media screen and (max-width:1300px) {
+  .skill__grid--text {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width:820px) {
+  .skill__grid--text {
+    padding: 7% 15% 0;
+    font-size: 3vw;
+  }
+}
+.skill__grid--text-small {
+  font-size: 1.4rem;
+  padding: 5%;
+}
+@media screen and (max-width:820px) {
+  .skill__grid--text-small {
+    font-size: 1.8vw;
+  }
+}
+@media screen and (max-width:500px) {
+  .skill__grid--text-small {
+    font-size: 1.2rem;
+  }
+}
+
+.about__ly {
+  margin: 10% 0 20%;
+}
+.about__inner {
+  margin: 2% 9%;
+}
+.about__img {
+  width: 500px;
+  height: auto;
+}
+.about__box {
+  display: flex;
+  justify-content: center;
+  padding-top: 10%;
+  gap: 2%;
+}
+@media screen and (max-width:820px) {
+  .about__box {
+    display: block;
+  }
+}
+.about__box-r {
+  width: 50%;
+  text-align: end;
+}
+@media screen and (max-width:820px) {
+  .about__box-r {
+    margin: 0 auto;
+  }
+}
+.about__box-l {
+  width: 50%;
+  height: auto;
+  background-color: #fff;
+  padding: 2%;
+}
+@media screen and (max-width:820px) {
+  .about__box-l {
+    width: 80%;
+    margin: 5% auto;
+  }
+}
+@media screen and (max-width:500px) {
+  .about__box-l {
+    width: 90%;
+    margin: 10% auto 5%;
+    text-align: center;
+  }
+}
+.about__box-title {
+  margin: 0 0 20px 0;
+  font-size: 30px;
+}
+@media screen and (max-width:500px) {
+  .about__box-title {
+    font-size: 2.5rem;
+  }
+}
+.about__box-subtitle {
+  margin: 0 0 20px 0;
+  font-size: 2.5rem;
+}
+@media screen and (max-width:500px) {
+  .about__box-subtitle {
+    font-size: 2rem;
+  }
+}
+.about__box-text {
+  margin: 0 0 20px 0;
+  font-size: 2rem;
+  line-height: 2;
+}
+@media screen and (max-width:1000px) {
+  .about__box-text {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width:500px) {
+  .about__box-text {
+    font-size: 1.4rem;
+  }
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 1s;
+}
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate.show:nth-of-type(1) {
+  transition-delay: 0.5s;
+}
+.animate.show:nth-of-type(2) {
+  transition-delay: 0.5s;
+}
+
+.contact__inner {
+  margin: 10% auto;
+  padding: 0 10% 0;
+  width: 90%;
+  max-width: 1200px;
+}
+@media screen and (max-width:500px) {
+  .contact__inner {
+    padding: 0 2% 0;
+  }
+}
+.contact__title {
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+form .field {
+  width: 100%;
+  position: relative;
+  margin-bottom: 10%;
+}
+@media screen and (max-width:500px) {
+  form .field {
+    margin-bottom: 20%;
+  }
+}
+form .field label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #333;
+  color: #fff;
+  width: 100%;
+  padding: 18px 0;
+  padding-left: 5%;
+  font-size: 1.6rem;
+  transition: 0.3s;
+}
+@media screen and (max-width:820px) {
+  form .field label {
+    padding: 18px 0 18px 5%;
+  }
+}
+@media screen and (max-width:500px) {
+  form .field label {
+    padding: 20px 0 20px 4%;
+  }
+}
+@media screen and (max-width:400px) {
+  form .field label {
+    padding: 20px 0 20px 2%;
+  }
+}
+form .field label + span {
+  opacity: 0;
+  color: #fff;
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 7%;
+  font-size: 2.5em;
+  text-shadow: 1px 2px 0 #999999;
+  transition: 0.3s;
+}
+form .field input[type=text],
+form .field textarea {
+  border: none;
+  width: 100%;
+  margin: 0;
+  padding: 18px 0;
+  padding-left: 19.5%;
+  color: #333;
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
+  background-color: rgba(204, 204, 204, 0.6);
+}
+form .field input[type=text] _::-webkit-full-page-media,
+form .field input[type=text] _:future, :root form .field input[type=text],
+form .field textarea _::-webkit-full-page-media,
+form .field textarea _:future,
+:root form .field textarea {
+  padding: 16px 0;
+  padding-left: 19.5%;
+}
+@media screen and (max-width:820px) {
+  form .field input[type=text],
+form .field textarea {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width:500px) {
+  form .field input[type=text],
+form .field textarea {
+    padding: 19px 0;
+    padding-left: 19.5%;
+  }
+}
+form .field input[type=text]#msg,
+form .field textarea#msg {
+  height: 55px;
+  resize: none;
+  transition: 0.3s;
+}
+@media screen and (max-width:1100px) {
+  form .field input[type=text]#msg,
+form .field textarea#msg {
+    height: 57px;
+  }
+}
+@media screen and (max-width:1000px) {
+  form .field input[type=text]#msg,
+form .field textarea#msg {
+    height: 55px;
+  }
+}
+@media screen and (max-width:1000px) {
+  form .field input[type=text]#msg,
+form .field textarea#msg {
+    height: 51px;
+  }
+}
+@media screen and (max-width:500px) {
+  form .field input[type=text]#msg,
+form .field textarea#msg {
+    height: 59px;
+  }
+}
+form .field input[type=text]:focus, form .field input[type=text].focused,
+form .field textarea:focus,
+form .field textarea.focused {
+  outline: none;
+}
+form .field input[type=text]:focus#msg, form .field input[type=text].focused#msg,
+form .field textarea:focus#msg,
+form .field textarea.focused#msg {
+  padding-bottom: 150px;
+}
+form .field input[type=text]:focus + label, form .field input[type=text].focused + label,
+form .field textarea:focus + label,
+form .field textarea.focused + label {
+  width: 18%;
+  background: #ccc;
+  color: #333;
+}
+form .field input[type=text].focused + label,
+form .field textarea.focused + label {
+  color: #ccc;
+}
+form .field:hover label {
+  font-size: 1.6rem;
+  width: 18%;
+  background: #333;
+  color: #fff;
+  margin: 0 auto;
+}
+form input[type=submit] {
+  background: #ccc;
+  color: #fff;
+  border: none;
+  position: relative;
+  padding: 13px 50px;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  transition: 0.3s;
+  display: flex;
+  margin: 10% auto;
+  background: #333;
+}
+@media screen and (max-width:500px) {
+  form input[type=submit] {
+    margin-top: 15px;
+    font-size: 1.6rem;
+  }
+}
+form input[type=submit]:hover {
+  background: #333;
+  color: #ccc;
+}
+form input[type=submit]:focus {
+  outline: none;
+  background: #999999;
+}
+
+#footer {
+  color: #fff;
+  background: #333;
+  text-align: center;
+}
+#footer .footer__inner {
+  padding: 40px;
+}
+#footer .footer__title {
+  padding-bottom: 10px;
+}
+#footer .footer__copyright {
+  margin: auto;
+  padding-top: 10px;
+}
+
+#page-top {
+  position: fixed;
+  right: 20px;
+  z-index: 2;
+  /*はじめは非表示*/
+  opacity: 0;
+  transform: translateY(100px);
+  /*リンクを右下に固定*/
+  /*　上に上がる動き　*/
+  /*　下に下がる動き　*/
+}
+#page-top a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 51px;
+  /* width*√3/2 */
+  -webkit-clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+          clip-path: polygon(25% 0, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background: #ccc;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.6rem;
+  transition: all 0.3s;
+  transform: rotate(90deg);
+}
+#page-top span {
+  transform: rotate(-90deg);
+}
+#page-top a:hover {
+  background: #777;
+}
+#page-top.UpMove {
+  -webkit-animation: UpAnime 0.5s forwards;
+          animation: UpAnime 0.5s forwards;
+}
+@-webkit-keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#page-top.DownMove {
+  -webkit-animation: DownAnime 0.5s forwards;
+          animation: DownAnime 0.5s forwards;
+}
+@-webkit-keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+}
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(100px);
+  }
+}/*# sourceMappingURL=style.css.map */
